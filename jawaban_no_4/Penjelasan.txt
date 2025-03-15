@@ -1,0 +1,45 @@
+ERD Point Of Sales dengan studi kasus Marketplace pada sebuah apotek
+
+Entitas ERD terdiri dari
+- User (Customer/Admin)
+- Customer Management
+- Product
+- Category
+- Supplier
+- Shipment
+- Shipment Package
+- Payment
+- Purchase Order
+- report sales
+
+1. Entitas User (Customer/Admin)
+merupakan entitas yang dapat berinteraksi dan memanipulasi entitas lain dengan Batasan peran tertentu.
+	user customer : berperan hanya bisa melakukan transaksi atau pembelian produk
+	user admin : berperan dapat mengelola data pada sistem POS
+
+2. Entitas Customer Management
+merupakan entitas daftar urut user customer yang terdaftar pada system yang dapat melakukan transaksi untuk pembelian suatu produk. peran admin dapat memanipulasi dan mengelola data tersebut
+
+3. Entitas Product
+merupakan entitas daftar urut product yang ditampilkan kepada end user atau customer yang dapat dilakukan pembelian.
+
+4. Entitas Category
+merupakan entitas daftar urut category untuk produk, data didalam categori mempunyai relasi dengan data produk dengan tipe relasi one to many
+
+5. Entitas Supplier
+merupakan entitas daftar urut supplier yang terlibat dalam stock dan pengadaan produk, data supplier memiliki relasi dengan daftar produk dengan tipe relasi one to many
+
+6. Entitas Shipment
+merupakan entitas daftar urut vendor yang menyediakan layanan pengiriman barang. user admin dapat mengelola vendor - vendor untuk ketersediaan pengiriman barang.
+
+7. Entitas Shipment package
+merupakan entitas daftar urut paket-paket pengiriman yang tersedia pada vendor, seperti paket pengiriman sameday, regular dan lainnya. shipment package memiliki relasi dengan entitas shipment dengan tipe relasi many to one.
+
+8. Entitas Paayment
+merupakan entitas daftar urut payment - payment yang memiliki ketersediaan untuk kebutuhan transaksi digital. payment tersebut akan digunakan oleh end user Ketika transaksi.
+
+9. Entitas Purchase Order
+merupakan entitas daftar urut data order dari customer, user admin dapat melakukan pemantauan order dan pengelolaan order
+
+10. Entitas report sales
+merupakan entitas dashboard atau laporan penjualan seperti laba, penjualan harian atau bulanan dan lainnya. admin dapat memantau hasil penjualan dan mencetak laporan
